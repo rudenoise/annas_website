@@ -1,0 +1,11 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Talk about difficult feelings in a safe space">
+  <style>
+    path,circle,rect,ellipse,line,polyline{fill:none;stroke:#55685C;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fp{fill:#E4C5B2}
+    .fps{fill:#EBD6C8}
+  </style>
+          <path class="fps" d="M10,40 L10,24 L24,12 L38,24 L38,40 Z"/>
+          <polyline points="6,26 24,11 42,26"/>
+          <rect class="fp" x="20" y="30" width="8" height="10" rx="1"/>
+        
+</svg>

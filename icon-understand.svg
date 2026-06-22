@@ -1,0 +1,11 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Understand yourself better">
+  <style>
+    path,circle,rect,ellipse,line,polyline{fill:none;stroke:#55685C;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fp{fill:#E4C5B2}
+    .fps{fill:#EBD6C8}
+  </style>
+          <circle class="fps" cx="21" cy="20" r="12"/>
+          <path d="M16,16 C18,14 22,14 25,16"/>
+          <line x1="29.5" y1="28.5" x2="40" y2="40"/>
+        
+</svg>

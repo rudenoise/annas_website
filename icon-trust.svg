@@ -1,0 +1,10 @@
+<svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Develop trust in yourself and your decisions">
+  <style>
+    path,circle,rect,ellipse,line,polyline{fill:none;stroke:#55685C;stroke-width:2.4;stroke-linecap:round;stroke-linejoin:round}
+    .fp{fill:#E4C5B2}
+    .fps{fill:#EBD6C8}
+  </style>
+          <path class="fps" d="M24,7 L38,12 L38,24 C38,33 31,39 24,42 C17,39 10,33 10,24 L10,12 Z"/>
+          <polyline points="18,24 22,29 31,18"/>
+        
+</svg>
