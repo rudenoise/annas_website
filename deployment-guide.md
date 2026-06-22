@@ -13,7 +13,7 @@ folder, and they all get uploaded together. Here is what each one is:
 
 | File | What it is |
 |------|------------|
-| `anna-hughes-therapy.html` | The page itself (the words and layout) |
+| `index.html` | The page itself (the words and layout) |
 | `hero.svg` | The two-chairs illustration |
 | `icon-heard.svg` | "Feel heard" ear icon |
 | `icon-safe.svg` | "Safe space" house icon |
@@ -33,7 +33,7 @@ folder, and they all get uploaded together. Here is what each one is:
 
 ## Step 1 — Put in your real details
 
-Open `anna-hughes-therapy.html` in a plain text editor (TextEdit on Mac,
+Open `index.html` in a plain text editor (TextEdit on Mac,
 Notepad on Windows — both are free and already installed).
 
 At the very top you'll see a short **HOW TO EDIT** note. The golden rule:
@@ -85,14 +85,13 @@ Tip: if your ideal name is taken, try `.co.uk`, `.com`, or adding your area
 is simple, you can host it **free**. The easiest beginner option is **Netlify
 Drop** — you literally drag your folder onto a web page.
 
-1. **Rename** `anna-hughes-therapy.html` to **`index.html`**. (Hosts
-   automatically show the file called `index.html` as the homepage. Renaming
-   it is safe — nothing else needs changing.)
-2. Go to **https://app.netlify.com/drop** in your browser.
-3. Drag your whole folder (all 13 files) onto the page.
-4. Wait a few seconds. It gives you a live link like
+1. Go to **https://app.netlify.com/drop** in your browser. (The homepage file
+   is already named `index.html`, which hosts automatically show as the
+   homepage — nothing to rename.)
+2. Drag your whole folder (all 13 files) onto the page.
+3. Wait a few seconds. It gives you a live link like
    `random-name.netlify.app`. Your site is online.
-5. Create a free account when prompted, so the site stays up and you can
+4. Create a free account when prompted, so the site stays up and you can
    come back to it.
 
 Other good free options if you'd rather: **Cloudflare Pages** (very fast) or
