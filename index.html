@@ -85,21 +85,23 @@
   .announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
 
   /* ---------- nav ---------- */
-  header.nav{position:sticky;top:0;z-index:50;background:rgba(244,239,230,.86);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+  header.nav{position:sticky;top:0;z-index:50;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:74px}
   .brand{display:flex;align-items:center;text-decoration:none}
   .brand img{height:46px;width:auto;display:block}
   .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--ink-soft);transition:color .2s}
-  .nav-links a:not(.btn):hover{color:var(--green)}
+  .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--plaster-soft);transition:color .2s}
+  .nav-links a:not(.btn):hover{color:#fff}
   .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px;transition:transform .15s ease,background .2s ease,color .2s ease}
   .btn-primary{background:var(--green);color:var(--plaster-soft)}
   .btn-primary:hover{background:var(--green-deep);color:#fff;transform:translateY(-1px)}
+  .nav-inner .btn-primary{background:var(--green-deep);color:var(--plaster-soft)}
+  .nav-inner .btn-primary:hover{background:var(--ink);color:#fff}
   .btn-ghost{background:transparent;color:var(--green);border:1.5px solid var(--green);padding:11px 22px}
   .btn-ghost:hover{background:var(--green);color:var(--plaster-soft)}
   .btn-light{background:var(--plaster);color:var(--green-deep)}
   .btn-light:hover{background:var(--plaster-soft);transform:translateY(-1px)}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--green)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--plaster-soft)}
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:80px 0 92px}
@@ -197,7 +199,7 @@
     .principles,.details,.steps,.quotes{grid-template-columns:1fr}
     .benefits{grid-template-columns:1fr}
     .nav-links{display:none}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:20px 28px;gap:18px;align-items:flex-start}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:74px;left:0;right:0;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25);padding:20px 28px;gap:18px;align-items:flex-start}
     .nav-toggle{display:block}
     section{padding:64px 0}
     .hero{padding:48px 0 60px}
