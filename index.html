@@ -86,9 +86,9 @@
 
   /* ---------- nav ---------- */
   header.nav{position:sticky;top:0;z-index:50;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25)}
-  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:112px}
+  .nav-inner{display:flex;align-items:center;justify-content:space-between;height:132px}
   .brand{display:flex;align-items:center;text-decoration:none}
-  .brand img{height:74px;width:auto;display:block}
+  .brand img{height:94px;width:auto;display:block}
   .nav-links{display:flex;gap:30px;align-items:center}
   .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--plaster-soft);transition:color .2s}
   .nav-links a:not(.btn):hover{color:#fff}
@@ -199,7 +199,9 @@
     .principles,.details,.steps,.quotes{grid-template-columns:1fr}
     .benefits{grid-template-columns:1fr}
     .nav-links{display:none}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:112px;left:0;right:0;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25);padding:20px 28px;gap:18px;align-items:flex-start}
+    .nav-inner{height:80px}
+    .brand img{height:54px}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:80px;left:0;right:0;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25);padding:20px 28px;gap:18px;align-items:flex-start}
     .nav-toggle{display:block}
     section{padding:64px 0}
     .hero{padding:48px 0 60px}
