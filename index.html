@@ -79,12 +79,10 @@
   .benefits{display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;margin-top:8px}
   .benefit{display:flex;gap:18px;align-items:center;font-size:1.12rem;color:var(--ink);font-weight:500}
   .benefit .bicon{flex:0 0 auto;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-  .benefit .bicon img{width:30px;height:30px;filter:brightness(0)}          /* black icon on light fills */
-  .benefits .benefit:nth-child(4n+1) .bicon{background:#CB7FB4}  /* EROS pink   */
-  .benefits .benefit:nth-child(4n+2) .bicon{background:#AFBFD8}  /* LIDO blue   */
-  .benefits .benefit:nth-child(4n+3) .bicon{background:#358F5E}  /* DAZE green  */
-  .benefits .benefit:nth-child(4n+3) .bicon img{filter:brightness(0) invert(1)}  /* white icon on green */
-  .benefits .benefit:nth-child(4n+4) .bicon{background:#F1AB85}  /* APRICOT     */
+  .benefit .bicon img{width:30px;height:30px;filter:brightness(0)}          /* clean black icons */
+  .benefits .benefit:nth-child(3n+1) .bicon{background:#CB7FB4}  /* EROS pink   */
+  .benefits .benefit:nth-child(3n+2) .bicon{background:#AFBFD8}  /* LIDO blue   */
+  .benefits .benefit:nth-child(3n+3) .bicon{background:#F1AB85}  /* APRICOT     */
 
   /* ---------- announcement ---------- */
   .announce{background:var(--green-deep);color:var(--plaster-soft);text-align:center;font-size:.86rem;letter-spacing:.02em;padding:9px 16px}
@@ -101,6 +99,8 @@
   .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px;transition:transform .15s ease,background .2s ease,color .2s ease}
   .btn-primary{background:var(--green);color:var(--plaster-soft)}
   .btn-primary:hover{background:var(--green-deep);color:#fff;transform:translateY(-1px)}
+  .hero-cta .btn-primary{background:var(--green-mid);color:#17161B}
+  .hero-cta .btn-primary:hover{background:#BE6BA4;color:#17161B}
   .nav-inner .btn-primary{background:var(--green-deep);color:var(--plaster-soft)}
   .nav-inner .btn-primary:hover{background:var(--ink);color:#fff}
   .btn-ghost{background:transparent;color:var(--green);border:1.5px solid var(--green);padding:11px 22px}
