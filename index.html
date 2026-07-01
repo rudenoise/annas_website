@@ -30,7 +30,7 @@
 <meta name="twitter:image" content="https://www.thehughespractice.co.uk/og-image.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,400,0;9..144,500,0;9..144,600,0&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200;300;400&display=swap" rel="stylesheet">
 <style>
   :root{
     --green:#358F5E;        /* DAZE — green, primary accent */
@@ -45,14 +45,14 @@
     --ink-soft:#56545E;
     --line:#E4DED3;
     --maxw:1140px;
-    --serif:"Fraunces",Georgia,serif;
-    --sans:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
+    --serif:"Roboto Mono",ui-monospace,monospace;
+    --sans:"Roboto Mono",ui-monospace,monospace;
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
   html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:18px;-webkit-font-smoothing:antialiased}
-  h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.1;letter-spacing:-0.01em}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:18px;font-weight:200;-webkit-font-smoothing:antialiased}
+  h1,h2,h3{font-family:var(--serif);font-weight:200;line-height:1.2;letter-spacing:0}
   a{color:inherit}
   .lead-para a{color:var(--green);text-decoration:underline;text-underline-offset:3px;font-weight:600}
   .step p a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
@@ -220,6 +220,9 @@
   @media (prefers-reduced-motion:reduce){
     *{animation:none!important;scroll-behavior:auto!important;transition:none!important}
   }
+
+  /* Roboto Mono ExtraLight — force light weight on everything */
+  .btn,.benefit,.help-tag,.foot-col h4,.contact-form label,.lead-para a,.step p a,.eyebrow,.hero h1 span,.foot-brand,.brand,.num,.mark{font-weight:200}
 </style>
 </head>
 <body>
