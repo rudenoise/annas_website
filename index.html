@@ -8,7 +8,7 @@
 
 <!-- EDIT (REQUIRED): replace https://www.thehughespractice.co.uk/ below with your real web address (3 places) once you have your domain -->
 <link rel="canonical" href="https://www.thehughespractice.co.uk/">
-<meta name="theme-color" content="#55685C">
+<meta name="theme-color" content="#F6F3EB">
 
 <!-- favicon (browser tab icon) -->
 <link rel="icon" href="favicon.svg" type="image/svg+xml">
@@ -33,17 +33,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,400,0;9..144,500,0;9..144,600,0&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green:#55685C;        /* Green Smoke, slightly lighter */
-    --green-deep:#384438;   /* dark smoke — dark bands & footer */
-    --green-mid:#6E8278;    /* lighter smoke — hover / accent */
-    --plaster:#E4C5B2;      /* Setting Plaster */
-    --plaster-soft:#EBD6C8;
-    --plaster-tint:#F4E5DB;
-    --cream:#F4EFE6;
-    --paper:#FBF7F0;
-    --ink:#2C2A26;
-    --ink-soft:#5A554C;
-    --line:#E2D9CC;
+    --green:#2F6BE0;        /* primary accent — bright blue */
+    --green-deep:#1C1C22;   /* near-black — dark sections & footer */
+    --green-mid:#EC6AA6;    /* pink accent */
+    --plaster:#F4B72E;      /* yellow accent */
+    --plaster-soft:#E9E6DE; /* soft off-white — text on dark */
+    --plaster-tint:#F6F3EB; /* clean base (former plaster band) */
+    --cream:#F6F3EB;        /* off-white base */
+    --paper:#FFFFFF;        /* white */
+    --ink:#17161B;          /* near-black text & headings */
+    --ink-soft:#56545E;
+    --line:#E6E1D7;
     --maxw:1140px;
     --serif:"Fraunces",Georgia,serif;
     --sans:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
@@ -77,21 +77,25 @@
 
   /* benefits list */
   .benefits{display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;margin-top:8px}
-  .benefit{display:flex;gap:18px;align-items:center;font-size:1.12rem;color:var(--green);font-weight:500}
-  .benefit .bicon{flex:0 0 auto;width:44px;height:44px;color:var(--green)}
+  .benefit{display:flex;gap:18px;align-items:center;font-size:1.12rem;color:var(--ink);font-weight:500}
+  .benefit .bicon{flex:0 0 auto;width:56px;height:56px;padding:12px;border-radius:50%;background:#E1ECFD}
+  .benefits .benefit:nth-child(4n+1) .bicon{background:#FBE0EB}
+  .benefits .benefit:nth-child(4n+2) .bicon{background:#E1ECFD}
+  .benefits .benefit:nth-child(4n+3) .bicon{background:#E2F1E1}
+  .benefits .benefit:nth-child(4n+4) .bicon{background:#FBEFC7}
 
   /* ---------- announcement ---------- */
   .announce{background:var(--green-deep);color:var(--plaster-soft);text-align:center;font-size:.86rem;letter-spacing:.02em;padding:9px 16px}
-  .announce a{color:#fff;text-decoration:underline;text-underline-offset:3px}
+  .announce a{color:var(--green-mid);text-decoration:underline;text-underline-offset:3px}
 
   /* ---------- nav ---------- */
-  header.nav{position:sticky;top:0;z-index:50;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25)}
+  header.nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:90px}
   .brand{display:flex;align-items:center;text-decoration:none}
   .brand img{height:54px;width:auto;display:block}
   .nav-links{display:flex;gap:30px;align-items:center}
-  .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--plaster-soft);transition:color .2s}
-  .nav-links a:not(.btn):hover{color:#fff}
+  .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--ink);transition:color .2s}
+  .nav-links a:not(.btn):hover{color:var(--green)}
   .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px;transition:transform .15s ease,background .2s ease,color .2s ease}
   .btn-primary{background:var(--green);color:var(--plaster-soft)}
   .btn-primary:hover{background:var(--green-deep);color:#fff;transform:translateY(-1px)}
@@ -101,13 +105,13 @@
   .btn-ghost:hover{background:var(--green);color:var(--plaster-soft)}
   .btn-light{background:var(--plaster);color:var(--green-deep)}
   .btn-light:hover{background:var(--plaster-soft);transform:translateY(-1px)}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--plaster-soft)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ink)}
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:80px 0 92px}
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center}
   .eyebrow{display:inline-block;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-mid);margin-bottom:22px}
-  .hero h1{font-size:clamp(2.7rem,6vw,4.5rem);color:var(--green);margin-bottom:24px}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.5rem);color:var(--ink);margin-bottom:24px}
   .hero h1 span{display:block;font-weight:400;font-size:0.62em}
   .hero h1 em{font-style:italic;font-weight:400;color:var(--green-mid)}
   .hero p.lede{font-size:1.2rem;color:var(--ink-soft);max-width:46ch;margin-bottom:34px;text-wrap:balance}
@@ -120,7 +124,7 @@
   section{padding:90px 0}
   .section-head{max-width:42ch;margin-bottom:48px}
   .section-head .eyebrow{margin-bottom:16px}
-  h2{font-size:clamp(2rem,4vw,3rem);color:var(--green)}
+  h2{font-size:clamp(2rem,4vw,3rem);color:var(--ink)}
   .lead-para{font-size:1.22rem;color:var(--ink-soft);max-width:60ch}
 
   .band-paper{background:var(--paper)}
@@ -139,7 +143,11 @@
   .principle p{color:var(--plaster-soft);font-size:1rem}
 
   .help-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
-  .help-tag{background:var(--cream);border:1px solid var(--line);padding:14px 22px;border-radius:999px;font-size:1.05rem;color:var(--green)}
+  .help-tag{background:transparent;border:1.6px solid var(--ink);padding:13px 22px;border-radius:999px;font-size:1.05rem;color:var(--ink)}
+  .help-grid .help-tag:nth-child(4n+1){border-color:#EC6AA6}
+  .help-grid .help-tag:nth-child(4n+2){border-color:#2F6BE0}
+  .help-grid .help-tag:nth-child(4n+3){border-color:#5FAE5C}
+  .help-grid .help-tag:nth-child(4n+4){border-color:#F0B72E}
 
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
   .portrait{aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:linear-gradient(150deg,var(--plaster-soft),var(--plaster));display:flex;align-items:flex-end;justify-content:center;box-shadow:0 30px 60px -34px rgba(55,66,57,.4)}
@@ -159,7 +167,7 @@
   .quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:8px}
   .quote{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:32px 28px}
   .quote .mark{font-family:var(--serif);font-size:2.4rem;color:var(--plaster);line-height:.4;display:block;margin-bottom:18px}
-  .quote p{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--green);line-height:1.45}
+  .quote p{font-family:var(--serif);font-style:italic;font-size:1.12rem;color:var(--ink);line-height:1.45}
   .quote .ph-note{font-family:var(--sans);font-style:normal;font-size:.8rem;color:var(--ink-soft);margin-top:16px;opacity:.75}
 
   .cta-final{text-align:center}
@@ -201,7 +209,7 @@
     .nav-links{display:none}
     .nav-inner{height:72px}
     .brand img{height:40px}
-    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--green-mid);border-bottom:1px solid rgba(56,68,56,.25);padding:20px 28px;gap:18px;align-items:flex-start}
+    .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:20px 28px;gap:18px;align-items:flex-start}
     .nav-toggle{display:block}
     section{padding:64px 0}
     .hero{padding:48px 0 60px}
