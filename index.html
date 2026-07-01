@@ -78,11 +78,13 @@
   /* benefits list */
   .benefits{display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;margin-top:8px}
   .benefit{display:flex;gap:18px;align-items:center;font-size:1.12rem;color:var(--ink);font-weight:500}
-  .benefit .bicon{flex:0 0 auto;width:56px;height:56px;padding:12px;border-radius:50%;background:#E7DDE9}
-  .benefits .benefit:nth-child(4n+1) .bicon{background:#E7DDE9}  /* pale EROS */
-  .benefits .benefit:nth-child(4n+2) .bicon{background:#DEE6F0}  /* pale LIDO */
-  .benefits .benefit:nth-child(4n+3) .bicon{background:#CFE4D8}  /* pale DAZE */
-  .benefits .benefit:nth-child(4n+4) .bicon{background:#F8E1D2}  /* pale APRICOT */
+  .benefit .bicon{flex:0 0 auto;width:56px;height:56px;border-radius:50%;display:flex;align-items:center;justify-content:center}
+  .benefit .bicon img{width:30px;height:30px;filter:brightness(0)}          /* black icon on light fills */
+  .benefits .benefit:nth-child(4n+1) .bicon{background:#CB7FB4}  /* EROS pink   */
+  .benefits .benefit:nth-child(4n+2) .bicon{background:#AFBFD8}  /* LIDO blue   */
+  .benefits .benefit:nth-child(4n+3) .bicon{background:#358F5E}  /* DAZE green  */
+  .benefits .benefit:nth-child(4n+3) .bicon img{filter:brightness(0) invert(1)}  /* white icon on green */
+  .benefits .benefit:nth-child(4n+4) .bicon{background:#F1AB85}  /* APRICOT     */
 
   /* ---------- announcement ---------- */
   .announce{background:var(--green-deep);color:var(--plaster-soft);text-align:center;font-size:.86rem;letter-spacing:.02em;padding:9px 16px}
@@ -342,35 +344,35 @@
     </div>
     <div class="benefits">
       <div class="benefit">
-        <img src="icon-heard.png" class="bicon" alt="">
+        <span class="bicon"><img src="icon-heard.png" alt=""></span>
         <span>Feel heard and understood.</span>
       </div>
       <div class="benefit">
-        <img src="icon-safe.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-safe.svg" alt=""></span>
         <span>Support in understanding difficult thoughts, feelings, and patterns.</span>
       </div>
       <div class="benefit">
-        <img src="icon-confidence.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-confidence.svg" alt=""></span>
         <span>Build confidence and self-esteem.</span>
       </div>
       <div class="benefit">
-        <img src="icon-understand.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-understand.svg" alt=""></span>
         <span>Understand yourself better.</span>
       </div>
       <div class="benefit">
-        <img src="icon-calm.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-calm.svg" alt=""></span>
         <span>Manage stress, anxiety, and overwhelm.</span>
       </div>
       <div class="benefit">
-        <img src="icon-change.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-change.svg" alt=""></span>
         <span>Work through life changes and challenges.</span>
       </div>
       <div class="benefit">
-        <img src="icon-relationships.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-relationships.svg" alt=""></span>
         <span>Improve relationships.</span>
       </div>
       <div class="benefit">
-        <img src="icon-trust.svg" class="bicon" alt="">
+        <span class="bicon"><img src="icon-trust.svg" alt=""></span>
         <span>Develop trust in yourself and your decisions.</span>
       </div>
     </div>
