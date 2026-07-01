@@ -33,17 +33,17 @@
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,WONK@9..144,400,0;9..144,500,0;9..144,600,0&family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --green:#2F6BE0;        /* primary accent — bright blue */
+    --green:#358F5E;        /* DAZE — green, primary accent */
     --green-deep:#1C1C22;   /* near-black — dark sections & footer */
-    --green-mid:#EC6AA6;    /* pink accent */
-    --plaster:#F4B72E;      /* yellow accent */
-    --plaster-soft:#E9E6DE; /* soft off-white — text on dark */
-    --plaster-tint:#F6F3EB; /* clean base (former plaster band) */
-    --cream:#F6F3EB;        /* off-white base */
+    --green-mid:#CB7FB4;    /* EROS — pink accent */
+    --plaster:#F1AB85;      /* APRICOT — accent */
+    --plaster-soft:#EFEAE1; /* BRISK — soft off-white, text on dark */
+    --plaster-tint:#EFEAE1; /* BRISK — base (former plaster band) */
+    --cream:#EFEAE1;        /* BRISK — off-white base */
     --paper:#FFFFFF;        /* white */
     --ink:#17161B;          /* near-black text & headings */
     --ink-soft:#56545E;
-    --line:#E6E1D7;
+    --line:#E4DED3;
     --maxw:1140px;
     --serif:"Fraunces",Georgia,serif;
     --sans:"Hanken Grotesk",system-ui,-apple-system,sans-serif;
@@ -78,11 +78,11 @@
   /* benefits list */
   .benefits{display:grid;grid-template-columns:1fr 1fr;gap:24px 44px;margin-top:8px}
   .benefit{display:flex;gap:18px;align-items:center;font-size:1.12rem;color:var(--ink);font-weight:500}
-  .benefit .bicon{flex:0 0 auto;width:56px;height:56px;padding:12px;border-radius:50%;background:#E1ECFD}
-  .benefits .benefit:nth-child(4n+1) .bicon{background:#FBE0EB}
-  .benefits .benefit:nth-child(4n+2) .bicon{background:#E1ECFD}
-  .benefits .benefit:nth-child(4n+3) .bicon{background:#E2F1E1}
-  .benefits .benefit:nth-child(4n+4) .bicon{background:#FBEFC7}
+  .benefit .bicon{flex:0 0 auto;width:56px;height:56px;padding:12px;border-radius:50%;background:#E7DDE9}
+  .benefits .benefit:nth-child(4n+1) .bicon{background:#E7DDE9}  /* pale EROS */
+  .benefits .benefit:nth-child(4n+2) .bicon{background:#DEE6F0}  /* pale LIDO */
+  .benefits .benefit:nth-child(4n+3) .bicon{background:#CFE4D8}  /* pale DAZE */
+  .benefits .benefit:nth-child(4n+4) .bicon{background:#F8E1D2}  /* pale APRICOT */
 
   /* ---------- announcement ---------- */
   .announce{background:var(--green-deep);color:var(--plaster-soft);text-align:center;font-size:.86rem;letter-spacing:.02em;padding:9px 16px}
@@ -144,10 +144,10 @@
 
   .help-grid{display:flex;flex-wrap:wrap;gap:14px;margin-top:8px}
   .help-tag{background:transparent;border:1.6px solid var(--ink);padding:13px 22px;border-radius:999px;font-size:1.05rem;color:var(--ink)}
-  .help-grid .help-tag:nth-child(4n+1){border-color:#EC6AA6}
-  .help-grid .help-tag:nth-child(4n+2){border-color:#2F6BE0}
-  .help-grid .help-tag:nth-child(4n+3){border-color:#5FAE5C}
-  .help-grid .help-tag:nth-child(4n+4){border-color:#F0B72E}
+  .help-grid .help-tag:nth-child(4n+1){border-color:#CB7FB4}  /* EROS */
+  .help-grid .help-tag:nth-child(4n+2){border-color:#AFBFD8}  /* LIDO */
+  .help-grid .help-tag:nth-child(4n+3){border-color:#358F5E}  /* DAZE */
+  .help-grid .help-tag:nth-child(4n+4){border-color:#F1AB85}  /* APRICOT */
 
   .about-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:56px;align-items:center}
   .portrait{aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:linear-gradient(150deg,var(--plaster-soft),var(--plaster));display:flex;align-items:flex-end;justify-content:center;box-shadow:0 30px 60px -34px rgba(55,66,57,.4)}
