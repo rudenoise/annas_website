@@ -50,8 +50,8 @@
   }
 
   *{box-sizing:border-box;margin:0;padding:0}
-  html{scroll-behavior:smooth}
-  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:18px;font-weight:200;-webkit-font-smoothing:antialiased}
+  html{scroll-behavior:smooth;overflow-x:hidden}
+  body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:18px;font-weight:200;overflow-x:hidden;-webkit-font-smoothing:antialiased}
   h1,h2,h3{font-family:var(--serif);font-weight:200;line-height:1.2;letter-spacing:0}
   a{color:inherit}
   .lead-para a{color:var(--green);text-decoration:underline;text-underline-offset:3px;font-weight:600}
@@ -92,8 +92,8 @@
   header.nav{position:sticky;top:0;z-index:50;background:var(--cream);border-bottom:1px solid var(--line)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:90px}
   .brand{display:flex;align-items:center;text-decoration:none}
-  .brand img{height:54px;width:auto;display:block}
-  .nav-links{display:flex;gap:30px;align-items:center}
+  .brand img{height:50px;width:auto;display:block}
+  .nav-links{display:flex;gap:38px;align-items:center}
   .nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--ink);transition:color .2s}
   .nav-links a:not(.btn):hover{color:var(--green)}
   .btn{display:inline-block;font-family:var(--sans);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px;transition:transform .15s ease,background .2s ease,color .2s ease}
@@ -107,7 +107,7 @@
   .btn-ghost:hover{background:var(--green);color:var(--plaster-soft)}
   .btn-light{background:var(--plaster);color:var(--green-deep)}
   .btn-light:hover{background:var(--plaster-soft);transform:translateY(-1px)}
-  .nav-toggle{display:none;background:none;border:none;cursor:pointer;font-size:1.5rem;color:var(--ink)}
+  .nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink);line-height:0}
 
   /* ---------- hero ---------- */
   .hero{position:relative;overflow:hidden;padding:80px 0 92px}
@@ -201,7 +201,7 @@
   .foot-col a.social{display:inline-flex;align-items:center;gap:8px;margin-top:4px}
   .foot-bottom{border-top:1px solid rgba(228,197,178,.2);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:rgba(235,214,200,.7)}
 
-  @media (max-width:880px){
+  @media (max-width:1000px){
     body{font-size:17px}
     .hero-grid,.intro-grid,.about-grid{grid-template-columns:1fr}
     .illus-stage{order:-1;margin-bottom:8px}
@@ -213,6 +213,7 @@
     .brand img{height:40px}
     .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--cream);border-bottom:1px solid var(--line);padding:20px 28px;gap:18px;align-items:flex-start}
     .nav-toggle{display:block}
+    .section-head,.lead-para,.hero p.lede,.intro-grid .lead-para,.cta-final p,.contact-form,.form-note{max-width:100%}
     section{padding:64px 0}
     .hero{padding:48px 0 60px}
   }
@@ -251,7 +252,7 @@
       <a href="#details">Practical details</a>
       <a href="#contact" class="btn btn-primary">Book a free call</a>
     </nav>
-    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false">☰</button>
+    <button class="nav-toggle" id="navtoggle" aria-label="Open menu" aria-expanded="false"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg></button>
   </div>
 </header>
 
