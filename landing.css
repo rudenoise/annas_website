@@ -1,0 +1,106 @@
+/* ============================================================
+   The Hughes Practice — shared styles for landing / article pages
+   Mirrors the main site's design tokens (see styleguide.html).
+   ============================================================ */
+:root{
+  --daze:#358F5E;      /* green — primary accent */
+  --eros:#CB7FB4;      /* pink */
+  --lido:#AFBFD8;      /* soft blue */
+  --apricot:#F1AB85;   /* warm */
+  --brisk:#EFEAE1;     /* off-white base */
+  --coral:#E8593B;     /* action */
+  --ink:#17161B;
+  --ink-soft:#56545E;
+  --dark:#1C1C22;
+  --line:#E4DED3;
+  --paper:#FFFFFF;
+  --maxw:1140px;
+  --mono:"Roboto Mono",ui-monospace,monospace;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;overflow-x:hidden}
+body{font-family:var(--mono);font-weight:200;color:var(--ink);background:var(--brisk);line-height:1.6;font-size:18px;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--mono);font-weight:200;line-height:1.2;letter-spacing:0}
+a{color:inherit}
+img{max-width:100%}
+.wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+a:focus-visible,button:focus-visible{outline:3px solid var(--eros);outline-offset:3px;border-radius:4px}
+
+/* ---------- nav ---------- */
+header.nav{position:sticky;top:0;z-index:50;background:var(--brisk);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:90px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:50px;width:auto;display:block}
+.nav-links{display:flex;gap:38px;align-items:center}
+.nav-links a:not(.btn){font-size:.95rem;text-decoration:none;color:var(--ink);transition:color .2s}
+.nav-links a:not(.btn):hover{color:var(--daze)}
+.btn{display:inline-block;font-family:var(--mono);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px;transition:transform .15s ease,background .2s ease,color .2s ease}
+.btn-primary{background:var(--coral);color:#fff}
+.btn-primary:hover{background:#D24A2E;color:#fff;transform:translateY(-1px)}
+.btn-hero{background:var(--eros);color:var(--ink);font-weight:300;text-transform:uppercase;letter-spacing:.12em;padding:15px 30px}
+.btn-hero:hover{background:#BE6BA4;color:var(--ink);transform:translateY(-1px)}
+.nav-toggle{display:none;background:none;border:none;cursor:pointer;padding:6px;color:var(--ink);line-height:0}
+
+/* ---------- article hero ---------- */
+.page-hero{padding:64px 0 40px}
+.eyebrow{display:inline-block;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--daze);margin-bottom:20px}
+.page-hero h1{font-size:clamp(2.1rem,5vw,3.4rem);max-width:20ch;margin-bottom:22px}
+.page-hero .standfirst{font-size:1.22rem;color:var(--ink-soft);max-width:62ch;text-wrap:balance}
+.crumb{font-size:.9rem;color:var(--ink-soft);margin-bottom:26px}
+.crumb a{color:var(--daze);text-decoration:none}
+.crumb a:hover{text-decoration:underline}
+
+/* ---------- article body ---------- */
+.article{background:var(--paper);border-top:1px solid var(--line)}
+.prose{max-width:720px;margin:0 auto;padding:64px 28px}
+.prose h2{font-size:1.7rem;margin:44px 0 16px}
+.prose h2:first-child{margin-top:0}
+.prose h3{font-size:1.2rem;font-weight:400;margin:30px 0 12px}
+.prose p{margin-bottom:18px;color:#2c2b32}
+.prose p.lead{font-size:1.15rem;color:var(--ink)}
+.prose ul{margin:0 0 18px 4px;list-style:none}
+.prose ul li{position:relative;padding-left:26px;margin-bottom:11px;color:#2c2b32}
+.prose ul li::before{content:"";position:absolute;left:0;top:11px;width:0;height:0;border-left:7px solid var(--daze);border-top:5px solid transparent;border-bottom:5px solid transparent}
+.prose strong{font-weight:500;color:var(--ink)}
+.prose a{color:var(--daze);text-decoration:underline;text-underline-offset:3px;font-weight:400}
+.prose blockquote{margin:26px 0;padding:20px 26px;background:var(--brisk);border-radius:16px;border-left:4px solid var(--eros);font-style:italic;color:var(--ink)}
+.pull{margin:32px 0;font-size:1.35rem;line-height:1.4;color:var(--ink);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:24px 0}
+
+/* callout / reassurance box */
+.note{margin:28px 0;padding:22px 26px;background:var(--lido);border-radius:16px;color:var(--ink)}
+.note .t{font-weight:500;margin-bottom:6px}
+
+/* ---------- CTA band ---------- */
+.cta{background:var(--daze);color:#fff;text-align:center;padding:72px 0}
+.cta h2{font-size:clamp(1.8rem,4vw,2.6rem);margin-bottom:16px;color:#fff}
+.cta p{max-width:52ch;margin:0 auto 30px;color:#fff;font-size:1.12rem}
+
+/* ---------- related ---------- */
+.related{padding:64px 0}
+.related h2{font-size:1.4rem;margin-bottom:26px}
+.rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.rel-card{display:block;background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:24px;text-decoration:none;color:var(--ink);transition:transform .15s ease,box-shadow .2s ease}
+.rel-card:hover{transform:translateY(-2px);box-shadow:0 18px 40px -28px rgba(28,28,34,.4)}
+.rel-card .k{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--daze);font-weight:600;margin-bottom:10px}
+.rel-card h3{font-size:1.12rem;font-weight:400;line-height:1.35}
+
+/* ---------- footer ---------- */
+footer{background:var(--brisk);color:var(--ink);padding:64px 0 36px;border-top:1px solid var(--line)}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:36px;margin-bottom:42px}
+.foot-col{max-width:280px}
+.foot-col img{max-width:240px;margin-bottom:16px;display:block}
+.foot-col h4{font-size:.8rem;text-transform:uppercase;letter-spacing:.12em;color:var(--ink);margin-bottom:14px;font-weight:600}
+.foot-col a,.foot-col p{display:block;color:var(--ink-soft);text-decoration:none;font-size:.95rem;margin-bottom:9px}
+.foot-col a:hover{color:var(--daze)}
+.foot-bottom{border-top:1px solid var(--line);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:.84rem;color:var(--ink-soft)}
+.foot-bottom a{color:var(--ink-soft)}
+
+@media (max-width:1000px){
+  .nav-links{display:none}
+  .nav-inner{height:72px}
+  .brand img{height:40px}
+  .nav-toggle{display:block}
+  .nav-links.open{display:flex;flex-direction:column;position:absolute;top:72px;left:0;right:0;background:var(--brisk);border-bottom:1px solid var(--line);padding:18px 28px 26px;gap:20px;align-items:flex-start}
+  .rel-grid{grid-template-columns:1fr}
+}
+@media (max-width:600px){body{font-size:17px}}
