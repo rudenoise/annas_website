@@ -115,6 +115,14 @@
 
   footer.sg{padding:40px 0 64px;color:var(--ink-soft);font-size:.85rem}
   @media (max-width:640px){.dd{grid-template-columns:1fr}}
+  @media print{
+    *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+    body{background:#fff}
+    section.sg{padding:26px 0;border-bottom:1px solid var(--line)}
+    header.sg{padding:24px 0 20px}
+    .swatch,.spec,.demo,.quote-demo,.card,.dd .box,.band-demo{break-inside:avoid}
+    h2.sg,h3.sg{break-after:avoid}
+  }
 </style>
 </head>
 <body>
