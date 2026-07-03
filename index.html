@@ -159,6 +159,12 @@
   .about-grid{display:block}
   .about-grid::after{content:"";display:block;clear:both}
   .about-grid>.portrait{float:left;width:360px;margin:6px 48px 22px 0}
+  .about-more{margin-top:32px}
+  .about-more>summary{cursor:pointer;list-style:none;display:inline-flex;align-items:center;gap:13px;font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);line-height:1.2}
+  .about-more>summary::-webkit-details-marker{display:none}
+  .about-more>summary::before{content:"";flex:0 0 auto;width:0;height:0;border-left:8px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;transition:transform .2s ease}
+  .about-more[open]>summary::before{transform:rotate(90deg)}
+  .about-more>summary:hover{color:var(--green)}
   .portrait{aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:linear-gradient(150deg,var(--plaster-soft),var(--plaster));display:flex;align-items:flex-end;justify-content:center;box-shadow:0 30px 60px -34px rgba(55,66,57,.4)}
   .portrait .ph{font-family:var(--sans);font-size:.82rem;color:var(--green-deep);opacity:.7;padding:18px;text-align:center}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;transform:scale(1.08);transform-origin:center}
@@ -299,10 +305,12 @@
         <p class="lead-para" style="margin-top:18px">If you're curious about how therapy could help, I invite you to <a href="#contact">book a free, 20-minute introductory call</a>.</p>
         <p class="lead-para" style="margin-top:18px">This is simply a time to talk, get a feel for how it might be to work together, and decide what's right for you. No pressure to commit, just a chance to test the water.</p>
         <p class="lead-para" style="margin-top:18px">If after that you want to book a session, we can meet face to face from a beautiful space in Bristol, or online if getting there is tricky.</p>
-        <h3 style="margin:34px 0 14px;font-weight:600">A bit more about me</h3>
-        <p class="lead-para">My background combines academic study with specialist counselling training. I hold a BA (Hons) degree in English and Social Science, and a Level 4 Diploma in Therapeutic Counselling, complemented by ongoing professional development and regular clinical supervision.</p>
-        <p class="lead-para" style="margin-top:18px">I'm a MBACP Registered Counsellor, which means I work to a professional, ethical framework you can trust.</p>
-        <p class="lead-para" style="margin-top:18px">Rather than quick fixes, our work together will give you space to explore things properly, make sense of your experiences, and move forward with greater clarity and confidence.</p>
+        <details class="about-more">
+          <summary>A bit more about me</summary>
+          <p class="lead-para" style="margin-top:16px">My background combines academic study with specialist counselling training. I hold a BA (Hons) degree in English and Social Science, and a Level 4 Diploma in Therapeutic Counselling, complemented by ongoing professional development and regular clinical supervision.</p>
+          <p class="lead-para" style="margin-top:18px">I'm a MBACP Registered Counsellor, which means I work to a professional, ethical framework you can trust.</p>
+          <p class="lead-para" style="margin-top:18px">Rather than quick fixes, our work together will give you space to explore things properly, make sense of your experiences, and move forward with greater clarity and confidence.</p>
+        </details>
         <p class="lead-para" style="margin-top:18px">If you're feeling ready, <a href="#contact">book your free introductory call</a> today.</p>
       </div>
     </div>
