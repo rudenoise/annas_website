@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hughes Practice — Brand & Style Guide</title>
+<meta name="robots" content="noindex">
+<meta name="description" content="Internal brand and style guide for The Hughes Practice website: colours, typography, logo, buttons, components and tone of voice.">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,200;0,300;0,400;0,500;0,600;1,200;1,300&display=swap" rel="stylesheet">
+<style>
+  :root{
+    /* Brand palette */
+    --lido:#AFBFD8;      /* LIDO — soft blue */
+    --eros:#CB7FB4;      /* EROS — pink */
+    --brisk:#EFEAE1;     /* BRISK — off-white */
+    --daze:#358F5E;      /* DAZE — green */
+    --apricot:#F1AB85;   /* APRICOT — warm accent */
+    --coral:#E8593B;     /* Coral — call-to-action accent */
+    --ink:#17161B;       /* near-black text */
+    --ink-soft:#56545E;  /* muted text */
+    --dark:#1C1C22;      /* near-black surface */
+    --line:#E4DED3;      /* hairline borders */
+    --paper:#FFFFFF;
+    --mono:"Roboto Mono",ui-monospace,monospace;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:var(--mono);font-weight:200;color:var(--ink);background:var(--brisk);line-height:1.6;font-size:17px;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+  /* ---- page header ---- */
+  header.sg{background:var(--paper);border-bottom:1px solid var(--line);padding:56px 0 44px}
+  header.sg .kicker{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--daze);font-weight:600;margin-bottom:16px}
+  header.sg h1{font-size:clamp(2rem,5vw,3.2rem);font-weight:200;line-height:1.1;margin-bottom:16px}
+  header.sg p{color:var(--ink-soft);max-width:60ch}
+  header.sg img{height:52px;width:auto;display:block;margin-bottom:28px}
+
+  /* ---- section scaffolding ---- */
+  section.sg{padding:56px 0;border-bottom:1px solid var(--line)}
+  .sg-num{font-size:.78rem;letter-spacing:.16em;text-transform:uppercase;color:var(--daze);font-weight:600;margin-bottom:12px}
+  h2.sg{font-size:1.7rem;font-weight:200;margin-bottom:8px}
+  .sg-lead{color:var(--ink-soft);max-width:66ch;margin-bottom:32px}
+  h3.sg{font-size:1.05rem;font-weight:500;margin:28px 0 14px;letter-spacing:.01em}
+  p+p{margin-top:12px}
+  .muted{color:var(--ink-soft)}
+  code{font-family:var(--mono);font-weight:400;background:var(--paper);border:1px solid var(--line);border-radius:6px;padding:1px 7px;font-size:.86em}
+
+  /* ---- colour swatches ---- */
+  .swatch-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:18px}
+  .swatch{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--paper)}
+  .swatch .chip{height:96px;display:flex;align-items:flex-end;padding:10px 12px}
+  .swatch .chip span{font-size:.72rem;font-weight:500;background:rgba(255,255,255,.85);color:#17161B;padding:2px 7px;border-radius:5px}
+  .swatch .chip.on-dark span{background:rgba(0,0,0,.35);color:#fff}
+  .swatch .meta{padding:12px 14px 15px}
+  .swatch .meta b{font-weight:600;font-size:.95rem;display:block}
+  .swatch .meta .hex{font-weight:400;font-size:.82rem;color:var(--ink-soft);letter-spacing:.02em;margin:2px 0 8px}
+  .swatch .meta .role{font-size:.82rem;color:var(--ink-soft);line-height:1.45}
+
+  /* ---- type specimens ---- */
+  .spec{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:22px 24px;margin-bottom:14px}
+  .spec .label{font-size:.72rem;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-soft);margin-bottom:12px}
+  .weights span{display:inline-block;margin:0 22px 10px 0}
+  .w2{font-weight:200}.w3{font-weight:300}.w4{font-weight:400}.w5{font-weight:500}.w6{font-weight:600}
+
+  /* ---- buttons (mirrors site) ---- */
+  .btn{display:inline-block;font-family:var(--mono);font-weight:600;font-size:.95rem;text-decoration:none;cursor:pointer;border:none;padding:13px 24px;border-radius:999px}
+  .btn-hero{background:var(--eros);color:#17161B;font-weight:300;text-transform:uppercase;letter-spacing:.12em}
+  .btn-nav{background:var(--coral);color:#fff}
+  .btn-ghost{background:transparent;color:var(--daze);border:1.5px solid var(--daze);padding:11px 22px}
+  .btn-light{background:var(--apricot);color:var(--dark)}
+  .btn-row{display:flex;flex-wrap:wrap;gap:14px;align-items:center}
+
+  /* ---- component demos ---- */
+  .demo{border:1px solid var(--line);border-radius:14px;background:var(--paper);padding:24px;margin-top:14px}
+  .demo.tint{background:var(--brisk)}
+  .bicon{width:56px;height:56px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;color:#17161B;font-weight:600}
+  .tags{display:flex;flex-wrap:wrap;gap:12px}
+  .tag{border:none;padding:12px 22px;border-radius:999px;font-size:.98rem;font-weight:200}
+  .tag.eros{background:var(--eros);color:#17161B}
+  .tag.lido{background:var(--lido);color:#17161B}
+  .tag.daze{background:var(--daze);color:#fff}
+  .tag.apricot{background:var(--apricot);color:#17161B}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px}
+  .quote-demo{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:26px;max-width:360px}
+  .quote-demo .mark{font-size:2.2rem;color:var(--apricot);display:block;line-height:.4;margin-bottom:14px}
+  .quote-demo p{font-style:italic;font-weight:200}
+  .quote-demo .who{font-style:normal;color:var(--ink-soft);font-size:.85rem;margin-top:12px}
+  details.acc{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+  details.acc>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:14px;padding:18px 2px;font-weight:400}
+  details.acc>summary::-webkit-details-marker{display:none}
+  details.acc>summary::before{content:"";flex:0 0 auto;position:relative;top:2px;width:0;height:0;border-left:8px solid var(--daze);border-top:6px solid transparent;border-bottom:6px solid transparent;transition:transform .2s}
+  details.acc[open]>summary::before{transform:rotate(90deg)}
+  details.acc .a{padding:0 2px 18px 26px;color:var(--ink-soft)}
+  .band-demo{border-radius:14px;padding:26px 28px;margin-top:12px}
+  .band-lido{background:var(--lido);color:#17161B}
+  .band-daze{background:var(--daze);color:#fff}
+  .band-brisk{background:var(--brisk);color:#17161B;border:1px solid var(--line)}
+  .band-demo .t{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;opacity:.75;margin-bottom:6px}
+
+  /* do / don't */
+  .dd{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}
+  .dd .box{border:1px solid var(--line);border-radius:12px;padding:16px 18px;background:var(--paper)}
+  .dd .box .h{font-weight:600;font-size:.85rem;margin-bottom:8px;display:flex;align-items:center;gap:8px}
+  .dd .do .h{color:var(--daze)}
+  .dd .dont .h{color:var(--coral)}
+  .dd ul{margin:0 0 0 18px}.dd li{margin-bottom:5px;font-size:.92rem;color:var(--ink-soft)}
+
+  ul.clean{list-style:none;margin-top:6px}
+  ul.clean li{padding:9px 0;border-bottom:1px solid var(--line);display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap}
+  ul.clean li b{font-weight:500}
+  ul.clean li span{color:var(--ink-soft);text-align:right}
+
+  footer.sg{padding:40px 0 64px;color:var(--ink-soft);font-size:.85rem}
+  @media (max-width:640px){.dd{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+
+<header class="sg">
+  <div class="wrap">
+    <img src="logo.png" alt="The Hughes Practice">
+    <div class="kicker">Brand &amp; Style Guide</div>
+    <h1>The Hughes Practice</h1>
+    <p>A single reference for how the website looks, sounds and behaves — so every future change stays consistent. Colours, type and components below mirror the live site exactly.</p>
+  </div>
+</header>
+
+<!-- 01 PERSONALITY -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">01 — Personality</div>
+    <h2 class="sg">Brand personality</h2>
+    <p class="sg-lead">Warm, calm and human, with quiet confidence. The practice should feel like a safe, unhurried space — never clinical, never salesy. Modern and considered, but soft.</p>
+    <div class="tags">
+      <span class="tag lido">Calm</span>
+      <span class="tag eros">Warm</span>
+      <span class="tag daze">Trustworthy</span>
+      <span class="tag apricot">Unhurried</span>
+      <span class="tag lido">Human</span>
+      <span class="tag eros">Approachable</span>
+    </div>
+  </div>
+</section>
+
+<!-- 02 LOGO -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">02 — Logo</div>
+    <h2 class="sg">Logo</h2>
+    <p class="sg-lead">The wordmark reads <b>THE HUGHES PRACTICE</b> with the subtitle <b>THERAPY FOR REAL LIFE</b>. Title set in Cagliostro, subtitle in Yaldevi (both baked into the artwork).</p>
+    <div class="demo"><img src="logo.png" alt="Logo on light" style="height:60px;width:auto"></div>
+    <div class="demo" style="background:var(--dark)"><img src="logo.png" alt="Logo on dark" style="height:60px;width:auto;filter:invert(1) brightness(1.6)"></div>
+    <h3 class="sg">Usage</h3>
+    <div class="dd">
+      <div class="box do">
+        <div class="h">✓ Do</div>
+        <ul>
+          <li>Use the black wordmark on light backgrounds (BRISK / white).</li>
+          <li>On dark backgrounds, use an off-white version of the wordmark.</li>
+          <li>Give it clear space; keep it around 50px tall in the header.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <div class="h">✕ Don't</div>
+        <ul>
+          <li>Place the black logo on a dark or busy background.</li>
+          <li>Stretch, recolour arbitrarily, or add effects.</li>
+          <li>Re-type the name in another font instead of using the artwork.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 03 COLOUR -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">03 — Colour</div>
+    <h2 class="sg">Colour palette</h2>
+    <p class="sg-lead">A clean off-white canvas with pops of colour. Named brand colours carry the personality; neutrals carry the text. Use one or two colour accents per section — never all at once.</p>
+
+    <h3 class="sg">Brand colours</h3>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#AFBFD8"><span>LIDO</span></div>
+        <div class="meta"><b>LIDO — Soft blue</b><div class="hex">#AFBFD8</div><div class="role">Announcement bar, the “Getting started” band, calm accents. Use dark text on it.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#CB7FB4"><span>EROS</span></div>
+        <div class="meta"><b>EROS — Pink</b><div class="hex">#CB7FB4</div><div class="role">Primary hero CTA, benefit icon circles, playful accents. Dark text on it.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#358F5E"><span>DAZE</span></div>
+        <div class="meta"><b>DAZE — Green</b><div class="hex">#358F5E</div><div class="role">Primary accent: links, final CTA band, accordion markers. White text on it.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#F1AB85"><span>APRICOT</span></div>
+        <div class="meta"><b>APRICOT — Warm</b><div class="hex">#F1AB85</div><div class="role">“Send message” button, testimonial quote marks, warm accent. Dark text.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip"><span>BRISK</span></div>
+        <div class="meta"><b>BRISK — Off-white</b><div class="hex">#EFEAE1</div><div class="role">The base page background, nav, and footer. The calm canvas everything sits on.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#E8593B"><span>Coral</span></div>
+        <div class="meta"><b>Coral — Action</b><div class="hex">#E8593B</div><div class="role">Reserved for the “Book a free call” nav button. High-energy; use sparingly.</div></div>
+      </div>
+    </div>
+
+    <h3 class="sg">Neutrals &amp; text</h3>
+    <div class="swatch-grid">
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#17161B"><span>Ink</span></div>
+        <div class="meta"><b>Ink</b><div class="hex">#17161B</div><div class="role">Default text and headings.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#56545E"><span>Ink soft</span></div>
+        <div class="meta"><b>Ink soft</b><div class="hex">#56545E</div><div class="role">Secondary / supporting text.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip on-dark" style="background:#1C1C22"><span>Dark</span></div>
+        <div class="meta"><b>Dark surface</b><div class="hex">#1C1C22</div><div class="role">Near-black; used sparingly for contrast (e.g. button text on apricot).</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip"><span>White</span></div>
+        <div class="meta"><b>Paper</b><div class="hex">#FFFFFF</div><div class="role">Cards, form fields, alternating section background.</div></div>
+      </div>
+      <div class="swatch">
+        <div class="chip"><span>Line</span></div>
+        <div class="meta"><b>Hairline</b><div class="hex">#E4DED3</div><div class="role">Borders, dividers, card outlines.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 04 TYPOGRAPHY -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">04 — Typography</div>
+    <h2 class="sg">Typography</h2>
+    <p class="sg-lead">One typeface throughout: <b>Roboto Mono</b> (Google Fonts). The monospace character gives the brand its distinctive, considered feel. Body text is <b>ExtraLight (200)</b>; heavier weights are used only for emphasis and small labels.</p>
+
+    <div class="spec">
+      <div class="label">Heading — ExtraLight 200</div>
+      <div style="font-size:2.6rem;font-weight:200;line-height:1.1">Sometimes life can feel hard</div>
+    </div>
+    <div class="spec">
+      <div class="label">Body — ExtraLight 200 · 17–18px · line-height 1.6</div>
+      <div style="font-weight:200">Therapy offers a space to untangle difficult thoughts and feelings, allowing you to find a way forward with greater clarity and confidence.</div>
+    </div>
+    <div class="spec">
+      <div class="label">Emphasis — Italic</div>
+      <div style="font-weight:200;font-style:italic">things can begin to shift.</div>
+    </div>
+    <div class="spec">
+      <div class="label">Small label / eyebrow — 600, uppercase, tracked</div>
+      <div style="font-weight:600;text-transform:uppercase;letter-spacing:.14em;font-size:.82rem;color:var(--eros)">What I help with</div>
+    </div>
+    <div class="spec">
+      <div class="label">Available weights</div>
+      <div class="weights">
+        <span class="w2">200 ExtraLight — body</span>
+        <span class="w3">300 Light — spaced CTAs</span>
+        <span class="w4">400 Regular — links</span>
+        <span class="w5">500 Medium — sub-labels</span>
+        <span class="w6">600 SemiBold — small caps labels</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 05 BUTTONS -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">05 — Buttons</div>
+    <h2 class="sg">Buttons</h2>
+    <p class="sg-lead">All buttons are fully-rounded pills. Each has a defined role — don't mix their colours or purposes.</p>
+    <div class="demo">
+      <div class="btn-row">
+        <a class="btn btn-hero">Arrange a free call</a>
+        <a class="btn btn-nav">Book a free call →</a>
+        <a class="btn btn-light">Send message</a>
+        <a class="btn btn-ghost">Secondary</a>
+      </div>
+    </div>
+    <ul class="clean">
+      <li><b>Hero CTA (EROS pink)</b> <span>Main page call-to-action · uppercase, letter-spaced, light weight</span></li>
+      <li><b>Nav button (Coral)</b> <span>“Book a free call” in the header only · white text</span></li>
+      <li><b>Light (Apricot)</b> <span>Form submit (“Send message”) · dark text</span></li>
+      <li><b>Ghost (Green outline)</b> <span>Low-emphasis secondary actions</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 06 ICONOGRAPHY -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">06 — Iconography &amp; imagery</div>
+    <h2 class="sg">Iconography &amp; imagery</h2>
+    <p class="sg-lead">Simple single-line icons, drawn in black at an even, medium stroke weight (~2px). Keep all icons in one visual family and one weight.</p>
+    <div class="demo">
+      <div style="display:flex;gap:22px;align-items:center;flex-wrap:wrap">
+        <span class="bicon" style="background:#CB7FB4"><img src="icon-heard.png" alt="" style="width:30px;height:30px;filter:brightness(0)"></span>
+        <span class="bicon" style="background:#AFBFD8"><img src="icon-understand.png" alt="" style="width:30px;height:30px;filter:brightness(0)"></span>
+        <span class="bicon" style="background:#F1AB85"><img src="icon-calm.png" alt="" style="width:30px;height:30px;filter:brightness(0)"></span>
+        <span class="bicon" style="background:#CB7FB4"><img src="icon-change.png" alt="" style="width:30px;height:30px;filter:brightness(0)"></span>
+      </div>
+      <p class="muted" style="margin-top:16px;font-size:.9rem">Benefit icons: 56px circle, icon in black, circle colour rotates EROS → LIDO → APRICOT.</p>
+    </div>
+    <h3 class="sg">Photography &amp; illustration</h3>
+    <p class="muted">Real, natural portraiture (soft, warm, in-context). Decorative illustration is single-line and minimal — like the hero flower. Both stay understated so the words lead.</p>
+  </div>
+</section>
+
+<!-- 07 COMPONENTS -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">07 — Components</div>
+    <h2 class="sg">Components</h2>
+
+    <h3 class="sg">Announcement bar</h3>
+    <div class="band-demo band-lido"><div class="t">LIDO strip · top of page</div>A slim soft-blue band for a light, optional message.</div>
+
+    <h3 class="sg">Colour tags</h3>
+    <div class="demo">
+      <div class="tags">
+        <span class="tag eros">Anxiety &amp; worry</span>
+        <span class="tag lido">Low mood</span>
+        <span class="tag daze">Relationships</span>
+        <span class="tag apricot">Grief &amp; loss</span>
+      </div>
+      <p class="muted" style="margin-top:14px;font-size:.9rem">Pills rotate EROS → LIDO → DAZE → APRICOT, each with a legible text colour (dark on light fills, white on green).</p>
+    </div>
+
+    <h3 class="sg">Card &amp; testimonial</h3>
+    <div class="demo tint" style="display:flex;gap:16px;flex-wrap:wrap">
+      <div class="card" style="flex:1;min-width:220px"><b style="font-weight:500">Where</b><p class="muted" style="margin-top:8px">In person in Bristol, or online by video anywhere in the UK.</p></div>
+      <div class="quote-demo"><span class="mark">“</span><p>Anna has a wonderful way of making people feel truly understood.</p><p class="who">— Sally</p></div>
+    </div>
+
+    <h3 class="sg">Accordion / disclosure</h3>
+    <div class="demo">
+      <details class="acc" open>
+        <summary>How much does a session cost?</summary>
+        <div class="a">Sessions are £50 and last 50 minutes. A green triangle marker rotates when open.</div>
+      </details>
+    </div>
+
+    <h3 class="sg">Section bands</h3>
+    <div class="band-demo band-brisk"><div class="t">BRISK — default</div>Most sections: off-white canvas, dark text.</div>
+    <div class="band-demo band-lido"><div class="t">LIDO — “Getting started”</div>Soft-blue band, dark text and dark icons.</div>
+    <div class="band-demo band-daze"><div class="t">DAZE — final call-to-action</div>Green band, white text, white form fields, apricot submit button.</div>
+  </div>
+</section>
+
+<!-- 08 LAYOUT -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">08 — Layout &amp; spacing</div>
+    <h2 class="sg">Layout &amp; spacing</h2>
+    <ul class="clean">
+      <li><b>Content max width</b> <span>1140px, centred, 28px side padding</span></li>
+      <li><b>Section rhythm</b> <span>90px top/bottom (64px on mobile)</span></li>
+      <li><b>Alternating bands</b> <span>off-white ↔ white, with colour bands for key moments</span></li>
+      <li><b>Corner radius</b> <span>Cards 18px · pills/buttons full (999px)</span></li>
+      <li><b>Mobile breakpoint</b> <span>1000px — nav collapses to a menu button</span></li>
+      <li><b>Borders</b> <span>1px hairline in “Line” (#E4DED3)</span></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 09 VOICE -->
+<section class="sg">
+  <div class="wrap">
+    <div class="sg-num">09 — Voice &amp; tone</div>
+    <h2 class="sg">Voice &amp; tone</h2>
+    <p class="sg-lead">Speak as Anna — first person, warm and direct. Plain, gentle language. Reassure without pressure. British English spelling.</p>
+    <div class="dd">
+      <div class="box do">
+        <div class="h">✓ Do</div>
+        <ul>
+          <li>“There's no rush and no obligation.”</li>
+          <li>Short sentences; everyday words.</li>
+          <li>Acknowledge how hard reaching out can feel.</li>
+          <li>Be specific: Bristol, online, £50, 20-minute call.</li>
+        </ul>
+      </div>
+      <div class="box dont">
+        <div class="h">✕ Don't</div>
+        <ul>
+          <li>Clinical jargon or diagnostic labels.</li>
+          <li>Hype, urgency, or hard-sell language.</li>
+          <li>Over-promising “fixes” or guaranteed outcomes.</li>
+          <li>Long, dense paragraphs.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer class="sg">
+  <div class="wrap">
+    The Hughes Practice — internal brand &amp; style guide. Not linked from the public site. Update this page whenever the site's design tokens change.
+  </div>
+</footer>
+
+</body>
+</html>
