@@ -165,6 +165,16 @@
   .about-more>summary::before{content:"";flex:0 0 auto;width:0;height:0;border-left:8px solid currentColor;border-top:6px solid transparent;border-bottom:6px solid transparent;transition:transform .2s ease}
   .about-more[open]>summary::before{transform:rotate(90deg)}
   .about-more>summary:hover{color:var(--green)}
+  /* FAQ accordion */
+  .faq-list{max-width:780px;margin-top:8px;border-top:1px solid var(--line)}
+  .faq-item{border-bottom:1px solid var(--line)}
+  .faq-item>summary{cursor:pointer;list-style:none;display:flex;align-items:baseline;gap:16px;padding:22px 4px;font-family:var(--serif);font-size:1.12rem;font-weight:400;color:var(--ink);line-height:1.45}
+  .faq-item>summary::-webkit-details-marker{display:none}
+  .faq-item>summary::before{content:"";flex:0 0 auto;position:relative;top:2px;width:0;height:0;border-left:8px solid var(--green);border-top:6px solid transparent;border-bottom:6px solid transparent;transition:transform .2s ease}
+  .faq-item[open]>summary::before{transform:rotate(90deg)}
+  .faq-item>summary:hover{color:var(--green)}
+  .faq-a{padding:0 4px 24px 28px;color:var(--ink-soft);max-width:70ch}
+  .faq-a a{color:var(--green);text-decoration:underline;text-underline-offset:3px;font-weight:600}
   .portrait{aspect-ratio:4/3;border-radius:22px;overflow:hidden;background:linear-gradient(150deg,var(--plaster-soft),var(--plaster));display:flex;align-items:flex-end;justify-content:center;box-shadow:0 30px 60px -34px rgba(55,66,57,.4)}
   .portrait .ph{font-family:var(--sans);font-size:.82rem;color:var(--green-deep);opacity:.7;padding:18px;text-align:center}
   .portrait img{width:100%;height:100%;object-fit:cover;object-position:50% 50%;display:block;transform:scale(1.08);transform-origin:center}
@@ -461,6 +471,113 @@
     </div>
   </div>
 </section>
+
+<!-- faq -->
+<!-- EDIT: Frequently asked questions. If you change a question or answer here,
+     update the matching entry in the FAQ structured data (JSON-LD) lower down too. -->
+  <section class="band-paper" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <h2>Frequently asked questions.</h2>
+    </div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>Where do sessions take place?</summary>
+        <div class="faq-a">I offer sessions in person from a comfortable, private space in Bristol, and online by video anywhere in the UK. You're welcome to choose whichever feels more comfortable, and to move between the two if your circumstances change.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How much does a session cost?</summary>
+        <div class="faq-a">Sessions are £50 and last 50 minutes. I keep a limited number of reduced-rate spaces for those who need them, so please do ask if cost is a barrier.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What happens in the free introductory call?</summary>
+        <div class="faq-a">It's a relaxed, no-pressure phone call of around 20 minutes. It's a chance to tell me a little about what's bringing you to therapy, ask any questions, and get a feel for how it might be to work together. There's no obligation to book afterwards.</div>
+      </details>
+      <details class="faq-item">
+        <summary>How often would we meet, and for how long?</summary>
+        <div class="faq-a">Sessions usually take place weekly, at a regular time that suits you. Rather than offering quick fixes, I work at your pace — some people come for a few months, others for longer. We'll review how things are going together, and you're always free to decide what's right for you.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Are you qualified and registered?</summary>
+        <div class="faq-a">Yes. I'm a registered member of the BACP (MBACP) and hold a Level 4 Diploma in Therapeutic Counselling, alongside ongoing professional development and regular clinical supervision. This means I work within a recognised professional and ethical framework.</div>
+      </details>
+      <details class="faq-item">
+        <summary>What can therapy help with?</summary>
+        <div class="faq-a">People come to me with a wide range of experiences — including anxiety and worry, low mood and depression, stress and burnout, relationship difficulties, grief and loss, life changes and transitions, low self-worth, and simply feeling stuck. You don't need a specific reason to come to therapy.</div>
+      </details>
+      <details class="faq-item">
+        <summary>Is what I share confidential?</summary>
+        <div class="faq-a">Yes. What you share with me is treated as confidential, and I'll explain how confidentiality works — including its rare limits — at the start of our work together. Any details you send through the contact form are only used to respond to your enquiry, as set out in the <a href="privacy.html">privacy policy</a>.</div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ structured data — keep in sync with the questions/answers above -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Where do sessions take place?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "I offer sessions in person from a comfortable, private space in Bristol, and online by video anywhere in the UK. You're welcome to choose whichever feels more comfortable, and to move between the two if your circumstances change."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does a session cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions are £50 and last 50 minutes. I keep a limited number of reduced-rate spaces for those who need them, so please do ask if cost is a barrier."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What happens in the free introductory call?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a relaxed, no-pressure phone call of around 20 minutes. It's a chance to tell me a little about what's bringing you to therapy, ask any questions, and get a feel for how it might be to work together. There's no obligation to book afterwards."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often would we meet, and for how long?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sessions usually take place weekly, at a regular time that suits you. Rather than offering quick fixes, I work at your pace — some people come for a few months, others for longer. We'll review how things are going together, and you're always free to decide what's right for you."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are you qualified and registered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. I'm a registered member of the BACP (MBACP) and hold a Level 4 Diploma in Therapeutic Counselling, alongside ongoing professional development and regular clinical supervision. This means I work within a recognised professional and ethical framework."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What can therapy help with?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "People come to me with a wide range of experiences — including anxiety and worry, low mood and depression, stress and burnout, relationship difficulties, grief and loss, life changes and transitions, low self-worth, and simply feeling stuck. You don't need a specific reason to come to therapy."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is what I share confidential?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. What you share with me is treated as confidential, and I'll explain how confidentiality works — including its rare limits — at the start of our work together. Any details you send through the contact form are only used to respond to your enquiry, as set out in the privacy policy."
+      }
+    }
+  ]
+}
+</script>
 
 <!-- final cta -->
 <!-- EDIT (REQUIRED): Contact — your email address (also appears in the footer) -->
