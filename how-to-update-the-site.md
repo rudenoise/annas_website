@@ -1,7 +1,7 @@
 # How to change the site and see your changes
 
-You make changes by **just asking me here (in Claude Code)**. You don't need
-to touch GitHub or any other tools.
+You make changes by **just asking me here (in Claude Code)**. You don't need to
+touch GitHub or any other tools.
 
 ## 1. Tell me what to change
 In plain English. For example:
@@ -13,13 +13,13 @@ In plain English. For example:
 (If you have a new photo or picture, attach it and tell me where it goes.)
 
 ## 2. I make the change
-I'll edit the site and save it. It updates itself automatically — usually
-live within about a minute.
+I'll edit the site and save it. It updates itself automatically — usually live
+within about a minute.
 
 ## 3. View it
 Open (or refresh) the live site:
 
-**https://rudenoise.github.io/annas_website/**
+**https://www.thehughespractice.co.uk/**
 
 If you don't see the change yet, give it a moment and do a "hard refresh":
 - **Mac:** hold **Shift** and click the reload button

@@ -17,7 +17,7 @@ client data actually lives:
 
 | Surface | Holds client data? | How much to worry |
 |---|---|---|
-| The website (brochure) | No | Low — pick on convenience → **GitLab** |
+| The website (brochure) | No | Low — pick on convenience → **GitHub Pages** |
 | Email (enquiries, admin) | **Yes** | **High** |
 | Documents / notes | **Yes** (special category) | **Highest** |
 
@@ -28,84 +28,61 @@ doesn't.
 
 ---
 
-## ⚠️ Fix the contact form first
+## ⚠️ Contact form — partially fixed, one decision left
 
-The current site (`index.html`) has a contact form that posts to:
+The form originally posted to a personal consumer Gmail. That's fixed: it now
+posts to the professional mailbox:
 
 ```
-action="https://formsubmit.co/meannahughes@gmail.com"
+action="https://formsubmit.co/anna@thehughespractice.co.uk"
 ```
 
-This sends a client's name and message through a third-party service
-(formsubmit.co) into a **personal consumer Gmail**. Neither has a data agreement
-with the practice, and a consumer Gmail account isn't permitted for professional
-client data. This is the most urgent item, independent of hosting.
+Enquiries land in the practice's own Google Workspace inbox. The remaining
+concern is that submissions still pass **through formsubmit.co**, a third-party
+relay with no data-processing agreement. Options, in order of simplicity:
 
-**Fix (simplest):** replace the form with a `mailto:` link to the professional
-mailbox (`hello@thehughespractice.co.uk`) — the same links already used
-elsewhere on the site. Data then goes straight into a mailbox the practice
-controls, with no third party in the middle.
+- **Simplest:** drop the form and rely on the `mailto:` links to
+  `anna@thehughespractice.co.uk` already used elsewhere on the site — no third
+  party in the middle.
+- **Keep a form:** switch to a handler that signs a DPA (e.g. Formspark,
+  Basin), and add a consent checkbox linking to the privacy policy.
 
-If a form is preferred over a plain email link, route it to the professional
-mailbox via a handler that will sign a data-processing agreement (e.g.
-Formspark, Basin) — never to a consumer inbox — and add a consent checkbox
-linking to the privacy policy.
+Note: formsubmit.co requires one-time activation — the first submission sends a
+confirmation email to the inbox, which must be clicked before messages flow.
 
 ---
 
-## 1. Website hosting — GitLab Pages
+## 1. Website hosting — GitHub Pages (set up, July 2026)
 
-We're using **GitLab Pages**: free, fast, custom domain, free HTTPS, and it
-matches the pattern already used for `www.hughesindustries.uk` — push to git,
-GitLab publishes.
+The site is hosted on **GitHub Pages**: free, fast, custom domain, free HTTPS.
 
 ### How it works
 
-1. Create a project on GitLab and push the site files to it.
-2. Add a `.gitlab-ci.yml` at the repo root. For a plain static site the whole
-   job is "publish these files as-is":
-
-   ```yaml
-   image: alpine:latest
-
-   pages:
-     stage: deploy
-     script:
-       - echo 'Nothing to build — static site'
-     artifacts:
-       paths:
-         - public
-     only:
-       - main
-   ```
-
-   GitLab Pages serves whatever is in the **`public/`** folder. Either move the
-   site files into a `public/` directory, or add a build step that copies them
-   there. (The `hughesindustries.uk` project already uses this exact pattern.)
-
-3. Every push to the `main` branch redeploys the site automatically.
+- The site lives in the GitHub repo **`rudenoise/annas_website`**.
+- A workflow (`.github/workflows/deploy.yml`) publishes the repo's files as-is
+  on every push to the default branch — changes are live within a minute or so.
+  The `drafts/` folder is excluded, so pages kept there stay unpublished.
+- Fallback address (always works): `https://rudenoise.github.io/annas_website/`
 
 ### Custom domain + HTTPS
 
-In the GitLab project: **Settings → Pages → New Domain**, enter
-`thehughespractice.co.uk`. GitLab shows a verification code and the DNS records
-to add. At the domain registrar / DNS host, set roughly:
+The Pages custom domain is set to **`www.thehughespractice.co.uk`** (matching
+the canonical URLs in the pages). The bare domain and the `github.io` address
+both redirect to it. DNS is managed at **Fasthosts** (the domain registrar):
 
 | Record | Host | Value |
 |---|---|---|
-| `A` | `@` (apex) | GitLab Pages IP (shown in GitLab) |
-| `CNAME` | `www` | `<namespace>.gitlab.io` |
-| `TXT` | `_gitlab-pages-verification-code` | verification value from GitLab |
+| `A` (×4) | `@` (apex) | `185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153` |
+| `CNAME` | `www` | `rudenoise.github.io` |
+| `MX` | `@` | `smtp.google.com` — **email, leave untouched** |
 
-GitLab then provisions a free **Let's Encrypt** certificate automatically —
-HTTPS turns on within an hour or so.
-
-> The exact IP and record names are shown in the GitLab Pages settings for the
-> project — always copy them from there, as they can change.
+GitHub provisions a free **Let's Encrypt** certificate automatically once DNS
+propagates; after that, "Enforce HTTPS" should be ticked in the repo's
+**Settings → Pages**.
 
 ### Note on data residency
 
-GitLab Pages is not UK-hosted, but that's fine: the website carries no personal
+GitHub Pages is not UK-hosted, but that's fine: the website carries no personal
 data. Keep client data off the website (no forms posting sensitive info) and the
 host's location doesn't matter for GDPR.
 
@@ -214,11 +191,13 @@ A short list of the practice's obligations as data controller:
 
 For the least fuss with a solid compliance position:
 
-1. **Website** → GitLab Pages, custom domain, free HTTPS (this guide, §1).
-2. **Email + documents** → **Microsoft 365 Business** (UK data residency, DPA,
-   MFA) — one subscription covers both.
+1. **Website** → GitHub Pages, custom domain, free HTTPS — ✅ done (§1).
+2. **Email** → **Google Workspace** on `anna@thehughespractice.co.uk` — ✅ in
+   place (the domain's mail records point at Google). Confirm the data region
+   is set to Europe and MFA is on.
 3. **Clinical records** → a UK practice-management tool (e.g. WriteUpp).
-4. **Fix the contact form** → `mailto:` to `hello@thehughespractice.co.uk`.
+4. **Contact form** → now delivers to the practice mailbox; decide whether to
+   keep formsubmit.co or go `mailto:`-only (see the warning section above).
 5. Work through the compliance checklist.
 
 ---
