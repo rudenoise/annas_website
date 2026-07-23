@@ -29,6 +29,10 @@ jobs:
       - name: Setup Pages
         uses: actions/configure-pages@v5
 
+      # Unpublished pages kept in the repo but excluded from the live site.
+      - name: Exclude drafts
+        run: rm -rf drafts
+
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
