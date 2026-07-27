@@ -75,8 +75,8 @@ function doPost(e) {
 
     // 2) Auto-reply to the person who enquired
     if (email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-      let firstName = (name.split(' ')[0] || 'there');
-      firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1); // tidy "jane" -> "Jane"
+      let firstName = (name.split(' ')[0] || 'there').toLowerCase();
+      firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1); // "jane"/"JANE" -> "Jane"
       MailApp.sendEmail({
         to: email,
         name: FROM_NAME,
