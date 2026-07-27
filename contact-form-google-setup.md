@@ -77,26 +77,38 @@ function doPost(e) {
     if (email && /^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       let firstName = (name.split(' ')[0] || 'there').toLowerCase();
       firstName = firstName.charAt(0).toUpperCase() + firstName.slice(1); // "jane"/"JANE" -> "Jane"
+      const greeting = 'Hi ' + firstName + ',';
+
+      // Plain-text version (fallback for email clients that don't show HTML)
+      const textBody =
+        greeting + '\n\n' +
+        "Thank you for reaching out. It can take a bit of courage to send that first message, and I'm really glad you did.\n\n" +
+        "I've received your enquiry and I'll reply personally within two working days to arrange a time for your free, 20-minute introductory call.\n\n" +
+        "There's no pressure or commitment. It's simply a chance to talk and see whether working together feels right.\n\n" +
+        "If you're in crisis or need urgent support before I'm able to reply, please don't wait. You can call the Samaritans free, at any time, on 116 123.\n\n" +
+        'Warm wishes,\nAnna\n\n\n' +
+        'Anna Hughes\nThe Hughes Practice\nTherapy for real life\n\nanna@thehughespractice.co.uk';
+
+      // HTML version (what most people will see — gives the italic tagline)
+      const htmlBody =
+        '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#222">' +
+        '<p>' + greeting + '</p>' +
+        "<p>Thank you for reaching out. It can take a bit of courage to send that first message, and I'm really glad you did.</p>" +
+        "<p>I've received your enquiry and I'll reply personally within two working days to arrange a time for your free, 20-minute introductory call.</p>" +
+        "<p>There's no pressure or commitment. It's simply a chance to talk and see whether working together feels right.</p>" +
+        "<p>If you're in crisis or need urgent support before I'm able to reply, please don't wait. You can call the Samaritans free, at any time, on 116 123.</p>" +
+        '<p>Warm wishes,<br>Anna</p>' +
+        '<p>Anna Hughes<br>The Hughes Practice<br><em>Therapy for real life</em></p>' +
+        '<p>anna@thehughespractice.co.uk</p>' +
+        '</div>';
+
       MailApp.sendEmail({
         to: email,
         name: FROM_NAME,
         replyTo: DEST,
-        subject: 'Thank you for your message — The Hughes Practice',
-        body:
-          'Hi ' + firstName + ',\n\n' +
-          "Thank you for reaching out — it can take a bit of courage to send that first " +
-          "message, and I'm really glad you did.\n\n" +
-          "I've received your enquiry and I'll reply personally within two working days to " +
-          "arrange a time for your free, 20-minute introductory call. There's no pressure or " +
-          "commitment — it's simply a chance to talk and see whether working together feels " +
-          "right.\n\n" +
-          "If you're in crisis or need urgent support before I'm able to reply, please don't " +
-          "wait — you can call the Samaritans free, at any time, on 116 123.\n\n" +
-          'Warm wishes,\n' +
-          'Anna\n\n' +
-          'Anna Hughes\n' +
-          'The Hughes Practice — therapy for real life\n' +
-          'anna@thehughespractice.co.uk'
+        subject: 'Thank you for your message',
+        body: textBody,
+        htmlBody: htmlBody
       });
     }
   } catch (err) {
