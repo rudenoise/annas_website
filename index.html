@@ -602,8 +602,8 @@
 <!-- EDIT: Contact — the enquiry form and email address (email also appears in the footer) -->
   <section class="band-forest cta-final" id="contact">
   <div class="wrap">
-    <h2>Let's arrange that first call.</h2>
-    <p>Fill in the form below and I'll get back to you to find a time for a free 20-minute chat.</p>
+    <h2 id="contactHeading">Let's arrange that first call.</h2>
+    <p id="contactIntro">Fill in the form below and I'll get back to you to find a time for a free 20-minute chat.</p>
     <form class="contact-form" id="contactForm" action="https://script.google.com/macros/s/AKfycbzbtY84hVy8JyHs6SihLhw2T_gJuJgZKHKk9xB4AIyeY3EaA9Ku-efBmTqqpnIOlSoN/exec" method="POST">
       <input type="text" name="_honey" class="hp" tabindex="-1" autocomplete="off" aria-hidden="true">
       <div class="row">
@@ -625,7 +625,7 @@
       <button type="submit" class="btn btn-light">Send message</button>
     </form>
     <p class="form-status" id="formStatus" role="status" aria-live="polite" hidden></p>
-    <p class="form-note">Your message is sent to me by email. Please don't include sensitive health details just yet — we can talk those through on the call. I'll only use the details you provide to respond to your enquiry and arrange a call; they're kept confidential, stored securely, never shared with third parties or used for marketing, and you can ask me to delete them at any time. See my <a href="privacy.html">privacy policy</a> for more.</p>
+    <p class="form-note" id="contactNote">Your message is sent to me by email. Please don't include sensitive health details just yet — we can talk those through on the call. I'll only use the details you provide to respond to your enquiry and arrange a call; they're kept confidential, stored securely, never shared with third parties or used for marketing, and you can ask me to delete them at any time. See my <a href="privacy.html">privacy policy</a> for more.</p>
   </div>
 </section>
 
@@ -684,10 +684,13 @@
       var body = new URLSearchParams(new FormData(form));
       fetch(form.action, { method:'POST', mode:'no-cors', body: body })
         .then(function(){
-          form.hidden = true;
+          ['contactHeading','contactIntro','contactForm','contactNote'].forEach(function(id){
+            var el = document.getElementById(id);
+            if(el){ el.hidden = true; }
+          });
           if(status){
             status.hidden = false;
-            status.textContent = "Thank you — your message has been sent. I'll be in touch soon to arrange a time.";
+            status.textContent = "Thank you. Your message has been sent. I'll be in touch soon to arrange a time.";
           }
         })
         .catch(function(){
