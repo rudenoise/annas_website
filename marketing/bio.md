@@ -26,8 +26,7 @@ across the web).
 > Person-centred counselling in Bristol and online across the UK, with Anna
 > Hughes (BACP Individual Member). A warm, non-judgemental space for anxiety,
 > depression, grief, relationships, trauma and feeling stuck — including Walk
-> and Talk sessions in nature. There's no hierarchy of pain. Free 20-minute
-> introductory call.
+> and Talk sessions in nature. Free 20-minute introductory call.
 
 ---
 
@@ -37,8 +36,8 @@ across the web).
 > therapy for real life, in person in Bristol and online across the UK.
 >
 > So many of us tell ourselves our problems aren't "big enough" for therapy, or
-> that reaching out is self-indulgent. I don't believe there's a hierarchy of
-> pain. If something is causing you pain or unease, it's worth talking about.
+> that reaching out is self-indulgent. If something is causing you pain or
+> unease, it's worth talking about.
 >
 > I work in a person-centred way, which means I follow your lead and go at your
 > pace. Rather than giving advice or telling you what to do, I offer a warm,
