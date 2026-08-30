@@ -58,6 +58,7 @@ header.nav{position:sticky;top:0;z-index:50;background:var(--brisk);border-botto
 .prose h3{font-size:1.2rem;font-weight:400;margin:30px 0 12px}
 .prose p{margin-bottom:18px;color:#2c2b32}
 .prose p.lead{font-size:1.15rem;color:var(--ink)}
+.prose p.updated{font-size:.9rem;color:var(--ink-soft);margin-bottom:28px}
 .prose ul{margin:0 0 18px 4px;list-style:none}
 .prose ul li{position:relative;padding-left:26px;margin-bottom:11px;color:#2c2b32}
 .prose ul li::before{content:"";position:absolute;left:0;top:11px;width:0;height:0;border-left:7px solid var(--daze);border-top:5px solid transparent;border-bottom:5px solid transparent}

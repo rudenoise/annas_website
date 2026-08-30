@@ -26,7 +26,7 @@ across the web).
 > Person-centred counselling in Bristol and online across the UK, with Anna
 > Hughes (BACP Individual Member). A warm, non-judgemental space for anxiety,
 > depression, grief, relationships, trauma and feeling stuck — including Walk
-> and Talk sessions in nature. Free 20-minute introductory call.
+> and Talk sessions in nature. Free 15-minute introductory call.
 
 ---
 
@@ -49,7 +49,7 @@ across the web).
 > stuck, or overwhelm at work. I also offer Walk and Talk sessions, out in
 > nature around Bristol.
 >
-> We'd begin with a free 20-minute introductory call — no pressure, just a
+> We'd begin with a free 15-minute introductory call — no pressure, just a
 > chance to see whether working together feels right.
 
 ---
@@ -68,7 +68,7 @@ confidence · Life changes & transitions · Feeling stuck · Work-related overwh
 
 ## Fees (for the dedicated fees field — keep separate so it's easy to update)
 
-> Free 20-minute introductory call. First session £25 (half price); subsequent
+> Free 15-minute introductory call. First session £25 (half price); subsequent
 > sessions £50, lasting 50–55 minutes.
 
 ---

@@ -45,7 +45,7 @@ relay with no data-processing agreement. Options, in order of simplicity:
   `anna@thehughespractice.co.uk` already used elsewhere on the site — no third
   party in the middle.
 - **Keep a form:** switch to a handler that signs a DPA (e.g. Formspark,
-  Basin), and add a consent checkbox linking to the privacy policy.
+  Basin), and add a consent checkbox linking to the privacy notice.
 
 Note: formsubmit.co requires one-time activation — the first submission sends a
 confirmation email to the inbox, which must be clicked before messages flow.
