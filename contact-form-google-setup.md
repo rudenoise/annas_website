@@ -83,7 +83,7 @@ function doPost(e) {
       const textBody =
         greeting + '\n\n' +
         "Thank you for reaching out. It can take a bit of courage to send that first message, and I'm really glad you did.\n\n" +
-        "I've received your enquiry and I'll reply personally within 24 hours to arrange a time for your free, 15-minute introductory call.\n\n" +
+        "I've received your enquiry and I'll reply personally within 24 hours on weekdays to arrange a time for your free, 15-minute introductory call.\n\n" +
         "There's no pressure or commitment. It's simply a chance to talk and see whether working together feels right.\n\n" +
         "If you're in crisis or need urgent support before I'm able to reply, please don't wait. You can call the Samaritans free, at any time, on 116 123.\n\n" +
         'Warm wishes,\nAnna\n\n\n' +
@@ -94,7 +94,7 @@ function doPost(e) {
         '<div style="font-family:Arial,Helvetica,sans-serif;font-size:15px;line-height:1.5;color:#222">' +
         '<p>' + greeting + '</p>' +
         "<p>Thank you for reaching out. It can take a bit of courage to send that first message, and I'm really glad you did.</p>" +
-        "<p>I've received your enquiry and I'll reply personally within 24 hours to arrange a time for your free, 15-minute introductory call.</p>" +
+        "<p>I've received your enquiry and I'll reply personally within 24 hours on weekdays to arrange a time for your free, 15-minute introductory call.</p>" +
         "<p>There's no pressure or commitment. It's simply a chance to talk and see whether working together feels right.</p>" +
         "<p>If you're in crisis or need urgent support before I'm able to reply, please don't wait. You can call the Samaritans free, at any time, on 116 123.</p>" +
         '<p>Warm wishes,<br>Anna</p>' +
@@ -125,7 +125,7 @@ function doPost(e) {
 
 - **Change the wording** any time by editing the auto-reply text and redeploying
   as a **New version** (see top section). The two obvious things to review:
-  the **response time** ("within 24 hours") and whether to add anything
+  the **response time** ("within 24 hours on weekdays") and whether to add anything
   about **fees or next steps** (currently kept short and warm on purpose).
 - **Deliverability:** sending from the Workspace account is reliable, but the
   very first auto-reply to a new recipient can land in their spam once, then
