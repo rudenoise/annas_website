@@ -9,7 +9,7 @@ across the web).
 **Keep these identical everywhere:**
 - Practice name: **The Hughes Practice**
 - Practitioner: **Anna Hughes**
-- Credential: **BACP Individual Member**
+- Credential: **Registered Member MBACP**
 - Area: **Bristol, and online across the UK**
 - Contact: **anna@thehughespractice.co.uk** · https://www.thehughespractice.co.uk
 
@@ -24,7 +24,7 @@ across the web).
 ## Short bio (~50 words — Google Business Profile "from the business", short fields)
 
 > Person-centred counselling in Bristol and online across the UK, with Anna
-> Hughes (BACP Individual Member). A warm, non-judgemental space for anxiety,
+> Hughes (Registered Member MBACP). A warm, non-judgemental space for anxiety,
 > depression, grief, relationships, trauma and feeling stuck — including Walk
 > and Talk sessions in nature. Free 15-minute introductory call.
 
@@ -32,7 +32,7 @@ across the web).
 
 ## Full bio (~190 words — Counselling Directory / Psychology Today "About")
 
-> Hi, I'm Anna — a qualified counsellor and BACP Individual Member, offering
+> Hi, I'm Anna — a qualified counsellor and registered member of the BACP (MBACP), offering
 > therapy for real life, in person in Bristol and online across the UK.
 >
 > So many of us tell ourselves our problems aren't "big enough" for therapy, or
