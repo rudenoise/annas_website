@@ -68,7 +68,7 @@ confidence · Life changes & transitions · Feeling stuck · Work-related overwh
 
 ## Fees (for the dedicated fees field — keep separate so it's easy to update)
 
-> Free 15-minute introductory call. Sessions £55, lasting 50–55 minutes.
+> Free 15-minute introductory call. Sessions £60, lasting 50–55 minutes.
 
 ---
 
