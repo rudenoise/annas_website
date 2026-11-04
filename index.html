@@ -47,6 +47,7 @@
     --maxw:1140px;
     --serif:"Roboto Mono",ui-monospace,monospace;
     --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
+    --ink-head:#34323C;      /* softer grey-black for main headings */
     --sans:"Roboto Mono",ui-monospace,monospace;
   }
 
@@ -54,7 +55,7 @@
   html{scroll-behavior:smooth;overflow-x:hidden}
   body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;font-size:18px;font-weight:200;overflow-x:hidden;-webkit-font-smoothing:antialiased}
   h1,h2,h3{font-family:var(--serif);font-weight:200;line-height:1.2;letter-spacing:0}
-  h1,h2{font-family:var(--display);font-weight:800}
+  h1,h2{font-family:var(--display);font-weight:700;color:var(--ink-head)}
   a{color:inherit}
   .lead-para a{color:var(--green);text-decoration:underline;text-underline-offset:3px;font-weight:600}
   .step p a{color:#fff;text-decoration:underline;text-underline-offset:3px;font-weight:600}
@@ -114,7 +115,7 @@
   .hero{position:relative;overflow:hidden;padding:80px 0 92px}
   .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:28px;align-items:center}
   .eyebrow{display:inline-block;font-size:.82rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;color:var(--green-mid);margin-bottom:22px}
-  .hero h1{font-size:clamp(2.7rem,6vw,4.5rem);color:var(--ink);margin-bottom:24px}
+  .hero h1{font-size:clamp(2.7rem,6vw,4.5rem);color:var(--ink-head);margin-bottom:24px}
   .hero h1 span{display:block;font-weight:400;font-size:0.62em}
   .hero h1 em{font-style:italic;font-weight:400;color:var(--green-mid)}
   .hero p.lede{font-size:1.2rem;color:var(--ink-soft);max-width:46ch;margin-bottom:34px;text-wrap:balance}
@@ -132,7 +133,7 @@
   section{padding:90px 0}
   .section-head{max-width:42ch;margin-bottom:48px}
   .section-head .eyebrow{margin-bottom:16px}
-  h2{font-size:clamp(2rem,4vw,3rem);color:var(--ink)}
+  h2{font-size:clamp(2rem,4vw,3rem);color:var(--ink-head)}
   .lead-para{font-size:1.22rem;color:var(--ink-soft);max-width:60ch}
 
   .band-paper{background:var(--paper)}
@@ -144,6 +145,7 @@
   /* light-blue band (Getting started) — dark text */
   .band-sky{background:#AFBFD8;color:#17161B}
   .band-sky h2,.band-sky h3,.band-sky .step h3{color:#17161B}
+  .band-sky h2{color:var(--ink-head)}
   .band-sky .step p{color:#26252b}
   .band-sky .step p a{color:#17161B}
   .band-sky .step .num{color:#17161B}
