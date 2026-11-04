@@ -17,7 +17,7 @@
   --maxw:1140px;
   --mono:"Roboto Mono",ui-monospace,monospace;
   --display:"Bricolage Grotesque","Helvetica Neue",Arial,sans-serif;
-  --ink-head:#34323C;      /* softer grey-black for main headings */
+  --ink-head:#54515F;      /* softer grey-black for main headings */
 }
 *{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;overflow-x:hidden}
