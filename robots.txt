@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# The flyer and style-guide pages carry a noindex meta tag rather than a
+# Disallow here: a disallowed page can still be indexed from external links,
+# and crawlers must be able to fetch the page to see the noindex.
+
+Sitemap: https://www.thehughespractice.co.uk/sitemap.xml
