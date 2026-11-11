@@ -70,6 +70,9 @@
   .illus .ft{fill:var(--plaster-tint);stroke:none}
   .illus .rug{stroke:var(--plaster)}
   .hero-illus{color:var(--green);width:100%;max-width:210px;height:auto}
+  .hero-portrait{width:100%;max-width:330px;height:auto;aspect-ratio:4/5;object-fit:cover;
+                 object-position:50% 32%;border-radius:200px 200px 24px 24px;
+                 box-shadow:0 30px 60px -34px rgba(55,66,57,.45)}
   .hero-illus path,.hero-illus ellipse,.hero-illus line{stroke-width:1.6}
   .spot{width:54px;height:54px;margin-bottom:20px;color:#F1E7DC}
   .spot path,.spot rect,.spot circle,.spot line,.spot polyline{stroke-width:2}
@@ -124,7 +127,7 @@
   .bacp-badge--sm img{width:158px}
   .foot-col .bacp-badge{margin-top:8px}
   .hero-note{font-size:.9rem;color:var(--ink-soft);margin-top:20px}
-  .illus-stage{display:flex;align-items:center;justify-content:flex-start}
+  .illus-stage{display:flex;align-items:center;justify-content:center}
 
   /* ---------- sections ---------- */
   section{padding:90px 0}
@@ -237,8 +240,17 @@
     body{font-size:17px}
     .hero-grid,.intro-grid,.about-grid{grid-template-columns:1fr}
     .about-grid>.portrait{float:none;width:100%;margin:0 0 24px}
-    .illus-stage{display:none}
     .hero-illus{max-width:180px}
+    /* mobile hero order: keyword line, headline, portrait, then the rest */
+    .hero-grid{display:flex;flex-direction:column;align-items:stretch}
+    .hero-grid>div:first-child{display:contents}
+    .hero .eyebrow{order:1}
+    .hero h1{order:2;margin-bottom:20px}
+    .illus-stage{display:flex;order:3;margin:0 0 26px;justify-content:flex-start}
+    .hero p.lede{order:4}
+    .hero-cta{order:5}
+    .hero-trust{order:6}
+    .hero-portrait{max-width:240px}
     .principles,.details,.steps,.quotes{grid-template-columns:1fr}
     .benefits{grid-template-columns:1fr}
     .nav-links{display:none}
@@ -292,6 +304,7 @@
   <section class="hero">
   <div class="wrap hero-grid">
     <div>
+      <p class="eyebrow">Counselling in Bristol &amp; online</p>
       <h1>Sometimes life feels hard.</h1>
       <p class="lede">I offer support for whatever life brings. Whether you're living with trauma, grief, relationship difficulties or simply feeling stuck, if something's weighing on you, it matters.</p>
       <div class="hero-cta">
@@ -312,7 +325,8 @@
        file name and put it next to this page), OR change the src below to
        your own image, e.g. src="my-photo.jpg".
   ==================================================================== -->
-      <img src="hero.png" class="hero-illus" alt="Line drawing of a pink peony flower">
+      <img src="portrait-hero.jpg" class="hero-portrait" width="700" height="875"
+           alt="Anna Hughes, counsellor at The Hughes Practice in Bristol">
     </div>
   </div>
 </section>
